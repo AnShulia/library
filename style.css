@@ -1,0 +1,1130 @@
+*{                      
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+/*Правило для всей странички*/
+html, body{
+    margin: 0 auto;
+    width: 100% auto;
+    max-width: 1440px;
+}
+@media screen and (max-width: 768px){
+    body,html{
+        width: 768px; width: 100%; max-width: 768px;
+        
+    }
+}
+.line{
+    width: 50px;
+    height: 1px;
+    flex-shrink: 0;
+    background: #0C0C0E;
+    margin-left: auto; margin-right: auto; 
+    margin-top: 20px;
+    
+}
+h2{ 
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    margin-top:20px;
+    margin-left: auto; margin-right: auto; 
+}
+a{
+    color: #FFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+button:hover{
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+/*HEAD*/
+.header{  
+    box-sizing: border-box;
+    background: #0C0C0E;
+    color:#FFFFFF;
+    width: 1440px;
+    height: 90px;
+    display: flex;
+}
+.header h1{ 
+    margin-top:20px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-family: Forum;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    width: 294px; height: 50px;
+    font-weight: 400;
+    white-space:nowrap;
+}
+.header ul{ 
+    display: inline-flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top:20px; margin-left: 414px;
+    font-size: 20px;
+    line-height: 50px;
+    font-family: Inter;
+    gap: 30px;
+    white-space:nowrap;
+    text-align: center;
+    
+}
+.header li:hover{          
+    border-bottom: 3px solid #ffffff;   
+}
+.icon-profile{
+    width: 28px;
+    height: 28px;
+    margin-top:31px; margin-left: 40px;
+}
+/*Иконка, взаимодействие*/
+.menu-profile{
+    display: none;
+    width: 80px; height: 115px;
+    background: #FFF; color:#000;
+    position:absolute;
+    top: 70px; margin-left: 1355px;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+}
+.menu-profile__title{
+   color: #000;
+   font-family: Inter;
+   font-size: 15px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 20px; 
+   margin-bottom: 5px;
+ }
+ .line4{
+    width: 40px; height: 1px;
+    margin-left: auto; margin-right: auto; 
+    flex-shrink: 0;
+    background-color: #BB945F;
+    margin-bottom: 15px;
+ }
+ .menu-profile a{
+    display:block;
+    margin-bottom: 10px;
+    color:black;
+ }
+#burger, [for=burger]{
+   display: none;
+   }
+@media screen and (max-width: 768px){
+    .header{
+        width: 768px;
+    }
+    .icon-profile{
+        position: absolute;
+        margin-left: 630px;
+    }
+    [for=burger]{ 
+        display: block;
+        font-size: 35px;
+        margin-top: 20px; margin-left: 390px;
+        z-index: 10;
+        
+    }
+    [for=burger]::before{
+        content:'☰';
+    } 
+   nav{
+    display: none;
+    background: #000;
+    width: 332px; height: 570px;
+    position: absolute;
+    margin-left: 438px; margin-top: 0;
+    
+   }
+   .header ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    margin-top: 100px; margin-left: 107px;
+    width: 118px; height: 370px;
+    font-size: 20px; 
+   }  
+   #burger:checked + label + nav{
+    display:block; 
+    
+   }
+   #burger:checked + [for=burger]::before{
+    
+    content:'☓';
+   }
+}
+/*End head*/
+/*Погнало тело*/
+main{
+    background: #FFF;
+    width: 100%;
+    width: 1440px;
+    margin:0;
+}
+@media screen and (max-width: 768px){
+    main{
+        width: 768px;
+    }
+    }
+main .welkome{ 
+    background-image: url('./assets/img/welcome.png');
+    background-color: #c7b39b;
+    height: 600px;
+    width: 1440px;    
+}
+main .about {
+    width: 1440px;  height: 837px; 
+    width: 100%; height: 100%;
+}
+.about p{
+    margin-top: 40px;
+    height: 40px;  
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+    font-family: Inter;
+}
+.about h2{
+    height: 40px; width: 106px;
+}
+.carousel{ 
+    margin-top: 20px;
+    height: 560px; width: 1440px;
+    display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-start;
+    overflow: hidden; 
+}
+.carousel ul {
+    display: inline-flex; gap: 25px; 
+}
+.carousel img{
+    flex-shrink: 0;
+}
+.arrow{
+    display: none;
+}
+main .about__pagination{ 
+    text-align:center;
+    margin: 40px 686px 40px 686px;
+    white-space: nowrap;
+}
+.dot{
+    cursor: pointer;
+    height: 16px; width: 16px;
+    margin: 0 2px;
+    background:#000;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active{
+    background:#BB945F;
+}
+.fourdot,
+.fivedot{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    main .welkome{
+        width: 768px; height: 600px; 
+        background-image: url('./assets/img/welcomeTablet.png');
+    }
+    main .about{
+        
+        display:flex;
+        flex-direction: column;
+        align-content: center;  
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+    }
+    main .about p{
+        display: block;
+        width: 728px;height: 80px;
+        margin-left: 20px;
+        text-align: center;
+    }      
+ .carousel{ 
+    margin-top: 20px;
+    height: 601px; width: 614px;
+    display: flex; flex-direction: row; justify-content: space-between;
+    align-items: center; 
+    overflow: hidden;                       
+    }
+    .arrow{
+        display: block;
+        z-index: 5;
+    }
+    .carousel ul{
+        width: 450px;
+        padding: 0; 
+        gap: 0;
+    }
+    .carousel img{
+        display: block;
+    }
+    main .about__pagination{
+        margin-top:25px;  
+        width: auto;
+        margin: 25px 0 0 0;
+    }
+    .fourdot,
+    .fivedot{
+        cursor: pointer;
+        height: 16px; width: 16px;
+        margin: 0 2px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+}
+/*favorites*/
+main .favorites{ 
+    width: 1440px; 
+    box-sizing: border-box;
+    margin-top: 57px;
+}
+main .favorites h2{
+    margin-top:13px;
+    width: 160px; height: 40px;
+}
+.text{
+    width: 234px; height: 24px;
+    margin-top: 40px; margin-left: 18px; margin-bottom: 41px;
+    text-align: center;
+    font-weight: 700;
+    white-space:nowrap;
+    line-height: normal;
+    font-size: 23px;
+}
+.favorites__bttn { /*Доработай*/
+     display:inline-flex;
+     flex-direction: row;
+}
+.favorites__bttn input{ 
+    width: 17px; height: 17px;
+    margin-left:20px;
+    stroke-width: 2px;
+    stroke: #000;
+}
+.favorites__bttn label{
+ margin-right: 60px;
+ font-family: Inter;
+ font-size: 20px;
+ line-height: normal;
+ margin-left:20px;
+ line-height: normal;
+ 
+}
+/*Общие favorit*/
+ .favorites__item{
+    position: relative;
+    margin-top: 38px; margin-left: 19px; margin-right: 59px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+    display: none;
+}
+.favorites-other{
+  position:absolute;
+  top: 1700px;
+
+}
+.favorites__item span{
+    display:block;
+    width: 102px;    
+    margin-top: 13px; margin-left: 19px;
+    font-size: 20px;
+    font-family: Forum;
+    line-height: 40px;
+    letter-spacing:2px ;
+    text-transform: capitalize;
+    white-space: nowrap;
+    border-bottom: 1px #BB945F solid ;
+}
+.favorites__item h3{
+    color: #000;
+    margin-top:20px; margin-left:20px;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.favorites__item h4{
+    color: #000;
+    margin-top:10px; margin-left:20px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.favorites__item p{
+    margin-top:30px; margin-left: 17px;
+    width: 355px; height: 320px;
+    font-size: 15px;
+    display:inline-block;
+    text-align: left;
+    font-family: Inter;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    white-space: pre-wrap;
+ 
+    
+}
+.favorites__item button{
+    width: 75px;  height: 30px;
+    flex-shrink: 0;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: #FFF;
+    border: 1px solid #0C0C0E;
+    border-radius: 2px;
+    padding: 1px 1px 1px 1px;
+    display: block;
+    margin-left: 20px; 
+    font-size: 10px;
+    letter-spacing: 1px;  
+}
+.favorites__item button:hover{
+    background-color: #BB945F;
+}
+.favorites__item img{
+    display: block;
+    margin-left: 390px; margin-top: -270px;
+}
+@media screen and (max-width: 768px){
+main .favorites{
+   margin-top: 0px;
+   width: 768px;
+   display: flex;
+   flex-direction: column;
+}
+main .favorites__item{
+    display:flex;
+    justify-content: center;
+}
+}
+/*Блок с книжками*/
+/*1*/
+main .bookone{border: 1px solid #000;
+   width: 550px; height: 555px; flex-shrink: 0;
+   margin-bottom:40px;
+   display: flex;
+   flex-direction: column;
+}
+/*2*/
+main .twobook{border: 1px solid #000;
+    display: block;
+    width: 550px; height: 555px; flex-shrink: 0; 
+    margin-bottom:40px;
+}
+/*3*/
+main .threebook{border: 1px solid #000;
+    width: 550px; height: 555px; flex-shrink: 0;
+    display: block;
+    margin-bottom:40px;
+}
+/*4*/
+main .fourhbook{border: 1px solid #000;
+    width: 550px; height: 555px; flex-shrink: 0;
+    display: block;
+    margin-bottom:40px;
+}
+
+
+/*coffe shop*/
+.coffeshop h2{
+    display: block;
+    margin-top:20px; 
+}
+.coffeshop span{
+    display: block;
+    height: 120px;
+    font-size: 20px;
+    margin: 40px 20px 0 20px;
+    line-height: 40px; 
+    font-family: Inter;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: capitalize;
+}
+h3{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    margin: 33px 20px 0 20px;
+    color: #BB945F;
+    font-size: 33px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+.menu{
+    display: flex;
+    width: 100%;
+    font-family: Inter;
+    letter-spacing: 2px;
+    line-height: 40px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    text-align: center;
+    justify-content: space-between;  
+}
+.coffe{
+   width: 50%; 
+   display: inline-flex;
+   flex-direction: column;
+   white-space:nowrap;
+   align-items: flex-start;
+   font-size: 20px;
+}
+.deserts{
+    width: 50%; 
+    font-size: 20px; 
+}
+.deserts h3{
+    float: right;}
+.spancoffe{
+    display: inline-flex;
+    width: 100%; height: 40px; width: 455px ;
+    flex-direction: row;
+    white-space:nowrap;
+    justify-content: space-between;
+    margin-top: 40px; margin-left:20px;
+    gap: 60px;    
+}
+.spandeserts{
+    display: inline-flex;
+    width: 100%; height: 40px;
+    gap: 60px;
+    margin-top: 40px;  margin-right:20px;
+    white-space:nowrap;
+    font-family: Inter;
+    justify-content: end;
+    align-items: flex-end;
+    text-align: right;
+}
+.line2{ /*следует доработать, с левой сторона хромает*/
+    width: 100px;
+    height: 1px;
+    background: #BB945F;
+    margin-top: 20px; margin-bottom: 20px;
+    text-align: center; 
+}
+@media screen and (max-width: 768px){
+    .coffeshop{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 768px; 
+    margin-top:10px;
+    }
+    .coffeshop h2{
+        margin-top:10px;
+    }
+    .coffeshop span{
+        height: 200px;
+        margin-bottom:20px;
+    }
+    .menu{
+        margin-top: -10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .coffe{
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .deserts h3{
+        float: right;
+    }
+    .deserts{
+        width: 100%; 
+        float: right;
+        padding-right: 50px;
+    }   
+ }
+
+/*КОНТАТЫ*/
+.OurContacts a{
+    color:#000;
+}
+.OurContacts h2{
+   width: 240px; height: 40px;
+   white-space: nowrap;
+   margin-top: 60px;
+}
+.contactmap{
+    display: flex;
+   margin: 40px 20px 0 20px;
+}
+.contacts{
+    display: block;
+    font-family: Inter;
+    width: 50%; 
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;   
+}
+.contacts p{
+    height: 40px;
+   margin-bottom: 20px;
+}
+.map{
+    width: 50%; 
+}
+@media screen and (max-width: 768px){
+    .OurContacts h2{
+        margin-top: 68px;
+    }
+   .OurContacts{
+        width: 728px;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        white-space: nowrap;
+    }
+    .contactmap{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+/*END CONTACTS*/
+/*Digital Library Cards*/
+.DigitalLibraryCards h2{
+    margin-top: 60px;
+}
+.digital{
+    width: 100%;
+    display:flex;}
+/*левая сорона*/
+.digitalleft{
+    width: 50%;
+    justify-content: center; 
+    text-align: start;
+}
+.digitalleft h3{
+    margin-top: 38px;  margin-left: 158px;
+    width: 324px; height: 36px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 0.6px;
+    line-height: normal;
+    font-family: Inter;
+    white-space: nowrap;
+    color: #000;
+}
+.digitalborder {
+    border: 3px solid #BB945F;
+    width: 600px;
+    height: 386px;
+    flex-shrink: 0;
+    margin-left: 20px;
+    display: flex;  
+    flex-direction: column;
+}
+.digitalbackgroung{
+    background: #BB945F;
+    width: 560px;
+    height: 272px;
+    flex-shrink: 0;
+    margin: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column; 
+    padding:20px 20px 20px 15px;
+}
+.digitalbackgroung p{
+    font-family: Forum;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    font-size: 30px;
+    white-space: nowrap;
+    display:block;
+    width: 294px; height: 50px;  
+}
+.digitalbackgroung form{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 14px; 
+    height: 163px; width: 100%;
+}
+.digitalbackgroung input{ 
+    background-color: #FFF; font-size: 30px;
+    width: 520px; height: 66px;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    
+}
+.digitalborder button{
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    color: #0C0C0E;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 242px; height: 44px;
+    margin-left: 176px; 
+    margin-top: 20px;
+    background: #FFF;
+}
+.DigitalLibraryCards button:hover{
+    background-color: #BB945F;
+}
+/*Правая сорона*/
+.digitalright{
+    width: 50%;
+    text-align: right;
+    font-size: 20px;
+}
+.digitalright h4{
+    
+    margin-top: 38px; margin-right: 20px;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+    font-family: Forum;
+    margin-bottom:35px ;
+}
+.digitalright p{
+    margin-right: 20px;
+    font-family: Inter;
+    width: 456px;
+    letter-spacing: 0.4px;
+    line-height: 40px;
+    text-align: right;
+}
+.digitalright button{
+    font-family: Inter;
+    width: 75px; height: 30px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    font-size: 10px;
+    background: #FFF;
+}
+.digitalrightbttm{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: end;
+
+}
+.bttnsign{
+    margin-top: 30px;
+    margin-right: 113px;  
+}
+.bttnlog{
+    margin-top: -30px;
+    margin-right: 17px; 
+}
+@media screen and (max-width: 768px){
+    /*Верх*/
+.DigitalLibraryCards{ 
+    display:flex;
+    width: 768px;
+    flex-direction: column;
+    justify-content: center;   
+}
+.DigitalLibraryCards h2{
+    margin-top: 35px;
+}
+.digital{
+    flex-direction: column;
+    align-items: center;
+
+}
+.digitalleft{
+    width: 100%;
+}
+.digitalleft h3{
+    margin-left: 222px;
+}
+.digitalborder{
+    margin-left: 84px;
+}
+/*Низ*/
+.digitalright{
+    width: 100%;
+    text-align: center;
+}
+.digitalrightbttm{
+    display:flex;
+    align-items: center;
+}
+.digitalright h4{
+    margin-top: 20px;
+}
+.digitalrightbttm p{
+    width: 600px;
+    text-align: center;
+    margin-top: 5px;
+}
+.bttnsign{
+    margin-top: 40px;
+    margin-right: 95px;
+}
+.bttnlog{ 
+    margin-right: -95px;
+}
+
+}
+/*Конец мэйна*/
+/*Идем в подвал*/
+.footer{
+    width: 1440px;
+    margin-top: 40px;
+    background: #0C0C0E;
+    color: #FFFFFF;
+    font-size: 17px;
+}
+.footertop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 15px; 
+}
+.topleft{
+    width: 50%;
+}
+.topleft  ul{
+    display: inline-flex;
+    gap:15px;
+    height: 24px;
+    margin-top: 18px; margin-left: -20px;
+}
+.topleft p{ 
+    width: 229px; height: 40px;
+    margin-top:15px; margin-left:15px;
+    line-height: 20px;
+    font-size: 17px;
+}
+.topright{
+    width: 50%;
+    gap: 10px;
+}
+.topright p{
+    display: block;
+    width: 149px; height: 40px;
+    font-family: Inter;
+    letter-spacing: 0.4px;
+    line-height: 20px;
+    text-align: right;
+    margin-left: 549px;
+    margin-top: 15px;
+    white-space: nowrap;
+    color:#FFF;
+}
+.line3{
+    width: 1400px;
+    height: 1px;
+    background: #FFF;
+    margin-top: 20px; margin-left: 20px; margin-right: 20px;
+    flex-shrink: 0;  
+}
+.bottom{
+    height: 110px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    margin-left: 20px; margin-right: 20px;
+}
+@media screen and (max-width: 768px){
+    .footer{
+        width: 768px;
+    }
+    .topright p{      
+        float:right;
+        margin-right: 30px;
+    }   
+}
+/*Наверняка лучше прописть на модули отдельный css файл, но пофиг.. */
+
+.bttn-close{
+    position: absolute;
+    margin-top: 15px; margin-left: 215px;
+    display:block; 
+    width: 19px; height: 19px;
+    cursor: pointer;
+}
+/*////////////////////////*/
+/*Модалки, оверлей*/
+.modal-login,
+.modal-register,
+.modal-my-profile
+{ 
+    visibility: hidden;
+    display: flex; align-items: center; justify-content: center;
+    width: 100%; height: 100%;
+    position:fixed;
+    top: 0; left: 0;
+    background-color: rgba(0,0,0, 0.5);   
+    overflow: hidden;
+}
+/*Открытие логина*/
+.modal-login__content{
+    background-color: #FFF;
+    display:flex;
+    width: 250px; height: 262px;
+    flex-direction: column;
+    align-items: center; 
+    position: absolute;
+    left: 50%; top:50%;
+    transform: translate(-50%); 
+}
+.modal-login h2{
+    color: #000;
+    font-family: Forum;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    top: 20;
+    margin-bottom: 20px;
+}
+.modal-login label{ 
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+    letter-spacing: 0.3px;
+    margin-left: -35px;
+    margin-bottom: 10px; 
+    width: 164px ; height: 20px;
+    white-space: nowrap;
+}
+.modal-login input{
+    border: 1px #BB945F solid;
+    width: 200px; height: 20px;
+    margin-bottom: 10px ;
+    margin-left: auto; margin-right: auto;
+}
+.modal-login button{
+    border: 1px black solid; border-radius: 2px;
+    width: 75px; height: 30px;
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;  font-family: Inter;
+    margin-right: 125px; margin-bottom: 10px; margin-top:10px;
+}
+.modal-login p{ 
+    font-size: 10px; font-family: Inter; text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    margin-right: 93px;
+}
+.modal-login p + a{
+    color:#000;
+    font-weight: 700; letter-spacing: 1px; text-decoration-line: underline;
+    margin-right: -80px; margin-top: -13px; font-size: 10px;
+}
+/*////////////////////////*/
+/*Открытие регистрации*/
+.modal-register__content{
+    width: 250px; height: 382px;
+    background: #FFF;
+    display:flex; flex-direction: column;
+    position: absolute;
+    left: 50%; top:50%;
+    transform: translate(-50%); 
+}
+.modal-register h2{
+    color: #000;
+    font-family: Forum;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    top: 20;
+    margin-bottom: 20px;
+}
+.modal-register label{
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px; /* 133.333% */
+    letter-spacing: 0.3px;
+    margin-left: 25px;
+    margin-bottom: 10px; 
+    width: 164px ; height: 20px;
+    white-space: nowrap;
+}
+.modal-register input{
+    border: 1px #BB945F solid;
+    width: 200px; height: 20px;
+    margin-bottom: 10px ;
+    margin-left: auto; margin-right: auto;
+}
+.modal-register button{
+    border: 1px black solid; border-radius: 2px;
+    width: 75px; height: 30px;
+    font-size: 10px; font-weight: 700; letter-spacing: 1px;  font-family: Inter;
+    margin-bottom: 10px; margin-top:10px; margin-left: 25px;
+}
+.modal-register p{
+    font-size: 10px; font-family: Inter; text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    margin-left: 25px;
+}
+.modal-register p + a{
+    color:#000;
+    font-weight: 700; letter-spacing: 1px; text-decoration-line: underline;
+    margin-left: 157px; margin-top: -13px; font-size: 10px;
+}
+/*////////////////////////*/
+/*MYPROFILE*/
+.modal-my-profile__content{
+    position: absolute;
+    left: 50%; top:50%;
+    width: 600px; height: 400px;
+    background: #FFF; 
+    display: flex; justify-content: space-around;
+    transform: translate(-50%, -50%); 
+}
+#bttn-close-profile{
+    width: 15px;
+    position: absolute;
+    margin-top: 25px; margin-left: 390px;
+}
+.left-profile{
+    background-color: #000;
+    width: 170px;
+    display: flex; flex-direction: column;  
+}
+.img-ava{
+    background: #FFF;
+    width: 80px; height: 80px;
+    margin-top: 139px; margin-left: 45px;  
+}
+.left-profile p{
+    display:block;
+    background: #FFF;
+    width: 120px; height: 30px;
+    margin-top: 15px; margin-left: 25px ;
+    font-size: 20px; line-height: 20px; text-transform: uppercase; font-family: Inter;
+    text-align: center; flex-shrink: 0; 
+}
+.right-profile{
+    width: 430px;
+    display:flex; flex-direction: column;   
+}
+.right-profile h2{
+    text-align: center;  font-family: Forum; font-size: 40px; line-height: 20px;
+    letter-spacing: 0.8px; text-transform: uppercase;
+    margin-top: 40px; margin-left: 20px;
+}
+.cards-profile{
+    margin-top: 40px; margin-left: 20px;
+    width: 237px; height: 81px;
+    display: inline-flex; justify-content: space-between;align-items: center;gap: 20px;  
+}
+.visits{
+    width: 53px; height: 100%;
+    display: flex;  flex-direction: column;justify-content: center;align-items: center;gap: 10px;
+}
+.right-profile h4{
+    text-align: center; font-family: Inter; font-size: 20px; font-weight: 400;
+    line-height: 20px;  letter-spacing: 0.4px; text-transform: capitalize;
+}
+.bonuses{
+    width: 53px; height: 100%;
+    display: flex;  flex-direction: column;justify-content: center;align-items: center;gap: 10px;
+}
+.books{
+    width: 53px; height: 100%;
+    display: flex;  flex-direction: column;justify-content: center;align-items: center;gap: 10px;
+}
+.right-profile h3{
+    color: #0C0C0E; text-align: center; font-family: Inter;font-size: 25px;
+    font-style: normal; font-weight: 400;line-height: 20px;
+    margin-top: 20px; margin-left:20px ;
+}
+.right-profile ul{
+    list-style-type: disc;
+    font-family: Inter;  font-size: 20px;line-height: 20px;letter-spacing: 2px;text-transform: capitalize;
+}
+.card-number{
+    width: 280px;
+    display: inline-flex; justify-content: space-between; align-items: center;
+    font-size: 20px; line-height: 20px;text-align: center; gap: 15px;
+    margin-top: 40px;  margin-left: 20px;
+}
+/*////////////////////////*/
+
+.open{
+    display:block;
+}
+.none{
+    display: none;
+}
+.hidden{
+    visibility: visible;
+}
+/*BUY A LIBRARY CARD*/
+.modal-buy-library-card{border: 1px red solid;
+   width: 650px; height: 540px;
+   display: none;
+}
+.header1{
+    width: 650px; height: 60px;  
+}
+/*Happy end, наверное..*/
+
+
+
+
+
+    
+
+
+  
+
+
+
+
+
+ 
+
+
+    
+/*
+/library/assets/img
